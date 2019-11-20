@@ -1,11 +1,20 @@
-function preload(){
-  // put preload code here
-}
-
 function setup() {
-  // put setup code here
+  createCanvas(windowWidth, windowHeight)
+  background("white");
+  textSize(15);
+  text("Draw the coriandoli to celebrate", width/6, height / 2);
+
 }
 
 function draw() {
-  // put drawing code here
+  push();
+  noStroke();
+  fill(color(random()*255, random()*255,random()*255));
+  ellipse(mouseX,mouseY, random(50));
+  pop();
+
+}
+
+function touchMoved(){
+  return false;
 }
